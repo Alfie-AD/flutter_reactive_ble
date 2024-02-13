@@ -30,12 +30,14 @@ class _DeviceDetail extends StatelessWidget {
   final DiscoveredDevice device;
   final void Function(String deviceId) disconnect;
   @override
-  Widget build(BuildContext context) => PopScope(
-        canPop: true,
-        onPopInvoked: (_) async {
-          disconnect(device.id);
-        },
-        child: DefaultTabController(
+  Widget build(BuildContext context) => 
+  // PopScope(
+  //       canPop: true,
+  //       onPopInvoked: (_) async {
+  //         disconnect(device.id);
+  //       },
+  //       child: 
+        DefaultTabController(
           length: 2,
           child: Scaffold(
             appBar: AppBar(
@@ -64,6 +66,6 @@ class _DeviceDetail extends StatelessWidget {
               ],
             ),
           ),
-        ),
+        // ),
       );
 }
